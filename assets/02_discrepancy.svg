@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="960" viewBox="0 0 700 960">
+ <rect width="700" height="960" fill="#eef3f1"/>
+ <rect x="45" y="35" width="610" height="890" rx="22" fill="#fff" stroke="#c6d8ce" stroke-width="3"/>
+ <rect x="45" y="35" width="610" height="130" rx="22" fill="#076f55"/>
+ <text x="350" y="86" fill="#fff" font-family="Arial,sans-serif" font-size="38" text-anchor="middle">TABAQ DEMO LABEL</text>
+ <text x="350" y="127" fill="#dcfce7" font-family="Arial,sans-serif" font-size="23" text-anchor="middle">SYNTHETIC DATA - NOT OFFICIAL</text>
+ <text x="350" y="213" fill="#143b33" font-family="Arial,sans-serif" font-size="36" text-anchor="middle">AIR CONDITIONER</text>
+ <rect x="80" y="245" width="540" height="83" rx="14" fill="#e2f4e8"/>
+ <text x="350" y="300" font-family="Arial,sans-serif" font-size="40" fill="#07583f" text-anchor="middle">ENERGY LEVEL: ب</text>
+ <text x="350" y="401" font-family="Arial,sans-serif" font-size="33" fill="#42585b" text-anchor="middle">MODEL</text>
+ <text x="350" y="451" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#163e40" text-anchor="middle">AC-18000-X</text>
+ <text x="350" y="529" font-family="Arial,sans-serif" font-size="30" fill="#42585b" text-anchor="middle">ANNUAL CONSUMPTION</text>
+ <text x="350" y="593" font-family="Arial,sans-serif" font-size="70" font-weight="bold" fill="#b45309" text-anchor="middle">3100 kWh</text>
+ <text x="350" y="650" font-family="Arial,sans-serif" font-size="30" fill="#42585b" text-anchor="middle">ENERGY EFFICIENCY: 12.5</text>
+ <text x="350" y="705" font-family="Arial,sans-serif" font-size="27" fill="#42585b" text-anchor="middle">BRAND: NASEEM | TYPE: SPLIT AC</text>
+ <rect x="78" y="746" width="544" height="94" rx="12" fill="#fff7e0" stroke="#e7c866"/>
+ <text x="350" y="786" font-family="Arial,sans-serif" font-size="27" fill="#805e08" text-anchor="middle">اختلاف الاستهلاك</text>
+ <text x="350" y="815" font-family="Arial,sans-serif" font-size="17" fill="#805e08" text-anchor="middle">Reference values are simulated for demonstration</text>
+ <text x="350" y="884" font-family="Arial,sans-serif" font-size="19" fill="#64748b" text-anchor="middle">Not a SASO label. No official verification.</text>
+ </svg>
