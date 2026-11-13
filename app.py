@@ -6,10 +6,10 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from io import BytesIO
+import hashlib
 from html import escape
 import json
 from pathlib import Path
-import re
 
 import pandas as pd
 import streamlit as st
@@ -17,6 +17,7 @@ from PIL import Image, UnidentifiedImageError
 
 from engine import FIELDS, FIELD_AR, evaluate
 from qa_runner import run_cases
+from ocr_extract import extract_from_image
 
 ROOT = Path(__file__).resolve().parent
 st.set_page_config(page_title="طابِق | TABAQ — نموذج أولي", page_icon="🔎", layout="wide",
@@ -69,32 +70,13 @@ def as_json(value):
     return json.dumps(value, ensure_ascii=False, indent=2).encode("utf-8")
 
 
-def show_ocr(uploaded_bytes: bytes):
-    """Experimental OCR preview only; never auto-certifies or silently sets labels."""
-    try:
-        import pytesseract
-        image = Image.open(BytesIO(uploaded_bytes)).convert("RGB")
-        raw = pytesseract.image_to_string(image, lang="ara+eng", config="--psm 6")
-        raw_en = pytesseract.image_to_string(image, lang="eng", config="--psm 6")
-    except ImportError:
-        st.warning("هذه الميزة الاختيارية تتطلب تثبيت pytesseract وبرنامج Tesseract وحزمتي اللغة العربية والإنجليزية.")
-        return
-    except Exception as exc:
-        st.warning(f"تعذرت تجربة OCR على هذه الصورة: {exc}")
-        return
-    st.caption("نص OCR خام تجريبي؛ قد تتغير الأرقام والحروف. لا تُعتمد النتيجة قبل المراجعة اليدوية.")
-    st.code(raw or "لم يُستخرج نص", language="text")
-    model_match = re.search(r"AC-[A-Za-z0-9-]+", raw + "\n" + raw_en, flags=re.I)
-    if model_match:
-        st.info(f"رقم طراز محتمل: {model_match.group(0)} — تحقق من الصورة وأدخله يدويًا.")
-
 
 db, scenarios = load_data()
 scenario_by_title = {sc["title"]: sc for sc in scenarios}
 
 st.markdown("""
 <div class="hero">
- <span class="eyebrow">TABAQ · MVP v1.2 · نسخة تحكيم تجريبية</span>
+ <span class="eyebrow">TABAQ · MVP v1.3 · نسخة تحكيم تجريبية</span>
  <h1>طابِق <span style="opacity:.75;font-size:1.4rem">| TABAQ</span></h1>
  <p>محرك المطابقة الذكية لبيانات المنتجات</p>
  <small>من التحقق إلى الدليل — مطابقة مفسَّرة · أدلة قابلة للمراجعة · امتناع عند نقص البيانات</small>
@@ -108,7 +90,7 @@ with tab_demo:
     st.subheader("اختبر الحالات الأربع")
     selected_title = st.selectbox("اختر السيناريو", list(scenario_by_title), index=0)
     scenario = scenario_by_title[selected_title]
-    st.caption("القيم في النموذج تُملأ من ملف السيناريو التجريبي المصاحب للصورة، وليست ناتجة عن OCR. يمكن تعديلها يدويًا.")
+    st.caption("اختر حالة تجريبية، أو ارفع صورة فعلية ليقترح OCR القيم؛ يجب مراجعة جميع الحقول قبل المطابقة.")
     image_col, form_col = st.columns([0.9, 1.25], gap="large")
     with image_col:
         st.markdown('<div class="fieldtitle">صورة الملصق التجريبي</div>', unsafe_allow_html=True)
@@ -122,18 +104,43 @@ with tab_demo:
                 image_bytes = None
             else:
                 try:
-                    st.image(Image.open(BytesIO(image_bytes)), caption="صورة مرفوعة — تُعرض فقط ولا تُحلَّل تلقائيًا", use_column_width=True)
+                    st.image(Image.open(BytesIO(image_bytes)), caption="صورة مرفوعة — تتطلب مراجعة الحقول قبل المطابقة", use_container_width=True)
                 except (UnidentifiedImageError, OSError):
                     st.error("تعذر قراءة ملف الصورة.")
                     image_bytes = None
         else:
-            st.image(str(original_image_path), caption="ملصق اصطناعي مصاحب للسيناريو", use_column_width=True)
+            st.image(str(original_image_path), caption="ملصق اصطناعي مصاحب للسيناريو", use_container_width=True)
         if image_bytes is not None:
-            with st.expander("🧪 تجربة قراءة OCR الحقيقية — اختيارية وغير معتمدة"):
-                st.caption("تجربة استخراج نص خام إذا كان Tesseract متاحًا على جهاز التشغيل. يلزم مراجعة القيم وتصحيحها قبل استخدامها.")
-                if st.button("قراءة النص OCR", key="ocr_button"):
-                    show_ocr(image_bytes)
-        st.info("رفع صورة مختلفة لا يغير الحقول تلقائيًا. راجع القيم أدناه لتتوافق مع الصورة التي اخترتها.")
+            fingerprint = scenario["key"] + ":" + hashlib.sha256(image_bytes).hexdigest()
+            if st.session_state.get("current_upload_fingerprint") != fingerprint:
+                st.session_state["current_upload_fingerprint"] = fingerprint
+                st.session_state.pop("last_result", None)
+                st.session_state.pop("ocr_result", None)
+                # Uploaded image is not the selected demo scenario. Avoid false pre-filled matches.
+                for field in FIELDS:
+                    st.session_state[f"input_{scenario['key']}_{field}"] = ""
+            st.caption("عند رفع صورة إلى الخدمة السحابية، تُنقل مؤقتًا إلى خادم التطبيق لمعالجتها؛ تجنب الصور التي تحتوي على بيانات شخصية.")
+            if st.button("🔍 قراءة الحقول من الصورة باستخدام OCR", key="run_real_ocr", use_container_width=True):
+                try:
+                    extraction = extract_from_image(image_bytes)
+                    for field in FIELDS:
+                        st.session_state[f"input_{scenario['key']}_{field}"] = str(extraction["fields"].get(field, ""))
+                    st.session_state["ocr_result"] = extraction
+                    st.session_state.pop("last_result", None)
+                    if extraction["fields"]:
+                        st.success(f"تم اقتراح {len(extraction['fields'])} حقلًا. راجعها وصححها قبل الضغط على إجراء المطابقة.")
+                    else:
+                        st.warning("لم تُقرأ حقول يمكن الاعتماد عليها. أدخل القيم يدويًا بعد مراجعة الصورة.")
+                except Exception as exc:
+                    st.warning("تعذرت قراءة OCR: " + str(exc)[:300])
+            extracted_preview = st.session_state.get("ocr_result")
+            if extracted_preview:
+                st.warning("نتائج OCR اقتراحات غير معتمدة. قد تكون الأرقام أو الطراز غير صحيحة؛ راجع جميع الحقول.")
+                with st.expander("النص الخام المستخرج والحقول المقترحة"):
+                    st.json(extracted_preview["fields"])
+                    st.code(extracted_preview["raw_text"] or "لم يُستخرج نص", language="text")
+        else:
+            st.info("للتجربة السريعة استخدم حقول السيناريو الجاهزة. لقراءة صورة جديدة ارفعها واستخدم زر OCR ثم راجع القيم.")
 
     with form_col:
         st.markdown('<div class="fieldtitle">البيانات المراد فحصها</div>', unsafe_allow_html=True)
@@ -142,8 +149,10 @@ with tab_demo:
             field_col1, field_col2 = st.columns(2, gap="small")
             for i, field in enumerate(FIELDS):
                 with (field_col1 if i % 2 == 0 else field_col2):
-                    label[field] = st.text_input(FIELD_AR[field], value=str(scenario["label"].get(field, "")),
-                                                 key=f"input_{scenario['key']}_{field}")
+                    widget_key = f"input_{scenario['key']}_{field}"
+                    if widget_key not in st.session_state:
+                        st.session_state[widget_key] = str(scenario["label"].get(field, ""))
+                    label[field] = st.text_input(FIELD_AR[field], key=widget_key)
             submitted = st.form_submit_button("🔍 إجراء المطابقة", type="primary", use_container_width=True)
     if submitted:
         result = evaluate(label, db)
@@ -161,7 +170,7 @@ with tab_demo:
         }
         css_class, emoji = presentation[result["status"]]
         st.markdown(f'<div class="result {css_class}"><h3>{emoji} {escape(result["status_ar"])}</h3><p>{escape(result["explanation_ar"])}</p></div>', unsafe_allow_html=True)
-        st.caption("النتيجة تخص الحقول اليدوية أو بيانات السيناريو فقط؛ لم يثبت النظام تطابق محتوى الصورة المرفوعة مع هذه الحقول.")
+        st.caption("القرار مبني على الحقول المعروضة بعد مراجعتك. استخراج OCR لا يثبت صحة القيم أو مصداقية الصورة.")
         st.subheader("جدول أدلة المقارنة")
         if result["comparisons"]:
             display = []
@@ -171,7 +180,7 @@ with tab_demo:
                                 "المراجعة": {"MATCH":"✅ متطابق", "DIFF":"⚠️ مختلف", "MISSING":"❓ ناقص", "INVALID":"❓ غير صالح"}[r["outcome"]]})
             st.dataframe(pd.DataFrame(display), hide_index=True, use_container_width=True)
         report = {
-            "project": "طابِق | TABAQ", "version": "1.2.0",
+            "project": "طابِق | TABAQ", "version": "1.3.0",
             "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "data_policy": "Synthetic demo data only; no governmental reference or live verification",
             "scenario": scenario["key"], "uploaded_file_name": saved["image_uploaded"],
@@ -211,7 +220,7 @@ with tab_about:
 - توليد **مسودة أدلة JSON** للمراجعة البشرية.
 - تنفيذ **60 اختبارًا آليًا اصطناعيًا** وعرض النجاح الفعلي.
 
-**ما لا يثبته بعد:** لا يوجد اتصال رسمي بقاعدة بيانات «تأكد»، ولا تعرف تلقائي موثوق على حقول الملصق من الصورة. تجربة OCR الاختيارية تعرض النص الخام للمراجعة اليدوية فقط. هذا النموذج لا يصدر حكمًا بالتزوير أو المطابقة التنظيمية.
+**حدود النظام:** OCR يقدّم اقتراحات للحقول وقد يخطئ، ولا يجوز اعتمادها دون مراجعة بشرية. لا يوجد اتصال رسمي بقاعدة بيانات «تأكد»، ولا اختبار مُثبت لدقة OCR على صور واقعية مستقلة. لا يصدر النموذج حكمًا بالتزوير أو المطابقة التنظيمية.
     """)
     st.markdown("**المصدر الرسمي لتطبيق تأكد:** https://www.saso.gov.sa/ar/takad_app/pages/default.aspx")
     st.caption("الواجهة وبيانات المنتجات اختبارية وغير تابعة للهيئة.")
