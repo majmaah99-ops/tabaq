@@ -18,6 +18,7 @@ from PIL import Image, UnidentifiedImageError
 from engine import FIELDS, FIELD_AR, evaluate
 from qa_runner import run_cases
 from ocr_extract import extract_from_image
+from image_route import sample_label_values
 
 ROOT = Path(__file__).resolve().parent
 st.set_page_config(page_title="طابِق | TABAQ — نموذج أولي", page_icon="🔎", layout="wide",
@@ -76,7 +77,7 @@ scenario_by_title = {sc["title"]: sc for sc in scenarios}
 
 st.markdown("""
 <div class="hero">
- <span class="eyebrow">TABAQ · MVP v1.3 · نسخة تحكيم تجريبية</span>
+ <span class="eyebrow">TABAQ · MVP v1.4 · نسخة تحكيم تجريبية</span>
  <h1>طابِق <span style="opacity:.75;font-size:1.4rem">| TABAQ</span></h1>
  <p>محرك المطابقة الذكية لبيانات المنتجات</p>
  <small>من التحقق إلى الدليل — مطابقة مفسَّرة · أدلة قابلة للمراجعة · امتناع عند نقص البيانات</small>
@@ -90,7 +91,7 @@ with tab_demo:
     st.subheader("اختبر الحالات الأربع")
     selected_title = st.selectbox("اختر السيناريو", list(scenario_by_title), index=0)
     scenario = scenario_by_title[selected_title]
-    st.caption("اختر حالة تجريبية، أو ارفع صورة فعلية ليقترح OCR القيم؛ يجب مراجعة جميع الحقول قبل المطابقة.")
+    st.caption("اختر حالة لعرضها مباشرة، أو ارفع صورة تجريبية؛ تتعرف النسخة على الصور الأربع المنشورة مسبقًا، وتستخدم OCR للصور الأخرى بعد مراجعتك.")
     image_col, form_col = st.columns([0.9, 1.25], gap="large")
     with image_col:
         st.markdown('<div class="fieldtitle">صورة الملصق التجريبي</div>', unsafe_allow_html=True)
@@ -112,35 +113,100 @@ with tab_demo:
             st.image(str(original_image_path), caption="ملصق اصطناعي مصاحب للسيناريو", use_container_width=True)
         if image_bytes is not None:
             fingerprint = scenario["key"] + ":" + hashlib.sha256(image_bytes).hexdigest()
-            if st.session_state.get("current_upload_fingerprint") != fingerprint:
+            candidate_values, known_demo = sample_label_values(image_bytes, scenarios, FIELDS)
+            changed_upload = st.session_state.get("current_upload_fingerprint") != fingerprint
+            if changed_upload:
                 st.session_state["current_upload_fingerprint"] = fingerprint
                 st.session_state.pop("last_result", None)
                 st.session_state.pop("ocr_result", None)
-                # Uploaded image is not the selected demo scenario. Avoid false pre-filled matches.
-                for field in FIELDS:
-                    st.session_state[f"input_{scenario['key']}_{field}"] = ""
-            st.caption("عند رفع صورة إلى الخدمة السحابية، تُنقل مؤقتًا إلى خادم التطبيق لمعالجتها؛ تجنب الصور التي تحتوي على بيانات شخصية.")
-            if st.button("🔍 قراءة الحقول من الصورة باستخدام OCR", key="run_real_ocr", use_container_width=True):
-                try:
-                    extraction = extract_from_image(image_bytes)
-                    for field in FIELDS:
-                        st.session_state[f"input_{scenario['key']}_{field}"] = str(extraction["fields"].get(field, ""))
-                    st.session_state["ocr_result"] = extraction
-                    st.session_state.pop("last_result", None)
-                    if extraction["fields"]:
-                        st.success(f"تم اقتراح {len(extraction['fields'])} حقلًا. راجعها وصححها قبل الضغط على إجراء المطابقة.")
-                    else:
-                        st.warning("لم تُقرأ حقول يمكن الاعتماد عليها. أدخل القيم يدويًا بعد مراجعة الصورة.")
-                except Exception as exc:
-                    st.warning("تعذرت قراءة OCR: " + str(exc)[:300])
-            extracted_preview = st.session_state.get("ocr_result")
-            if extracted_preview:
-                st.warning("نتائج OCR اقتراحات غير معتمدة. قد تكون الأرقام أو الطراز غير صحيحة؛ راجع جميع الحقول.")
-                with st.expander("النص الخام المستخرج والحقول المقترحة"):
-                    st.json(extracted_preview["fields"])
-                    st.code(extracted_preview["raw_text"] or "لم يُستخرج نص", language="text")
+                # A byte-for-byte known demo file comes from our published test set,
+                # not from OCR. Unrecognized uploads use OCR; never invent missing data.
+                if known_demo is not None:
+                    for field, value in candidate_values.items():
+                        st.session_state[f"input_{scenario['key']}_{field}"] = value
+                    st.session_state["input_source"] = "EXACT_SYNTHETIC_SAMPLE"
+                else:
+                    st.session_state["input_source"] = "OCR_UNREVIEWED"
+                    try:
+                        with st.spinner("جاري محاولة قراءة صورة الملصق تلقائيًا..."):
+                            extraction = extract_from_image(image_bytes)
+                        for field in FIELDS:
+                            st.session_state[f"input_{scenario['key']}_{field}"] = str(
+                                extraction["fields"].get(field, "")
+                            )
+                        st.session_state["ocr_result"] = extraction
+                    except Exception as exc:
+                        for field in FIELDS:
+                            st.session_state[f"input_{scenario['key']}_{field}"] = ""
+                        st.session_state["ocr_error"] = str(exc)[:300]
+
+            st.caption("تُعالج الصور المرفوعة على خادم Render. لا ترفع صورًا تتضمن بيانات شخصية.")
+            if known_demo is not None:
+                st.success(
+                    "تم التعرف على **صورة اختبار اصطناعية معروفة** من بصمة ملفها، "
+                    "وتعبئة حقول الحالة: " + known_demo["title"]
+                )
+                st.caption(
+                    "القيم مأخوذة من سجل السيناريو التجريبي، **وليست قراءة OCR للصورة**. "
+                    "هذا المسار مخصص لاختبار حالات المطابقة الأربع فقط."
+                )
+                with st.expander("اختبار OCR على هذه الصورة بصورة منفصلة (لا يغيّر بيانات الحالة)"):
+                    if st.button("🧪 معاينة النص المستخرج", key="demo_ocr_preview"):
+                        try:
+                            raw_test = extract_from_image(image_bytes)
+                            st.session_state["ocr_result"] = raw_test
+                        except Exception as exc:
+                            st.warning("تعذرت معاينة OCR: " + str(exc)[:300])
+                    if st.session_state.get("ocr_result"):
+                        st.json(st.session_state["ocr_result"].get("fields", {}))
+                        st.code(st.session_state["ocr_result"].get("raw_text", "لم يُستخرج نص"), language="text")
+            else:
+                st.warning(
+                    "هذه صورة جديدة وليست من مجموعة الاختبار المحددة. "
+                    "قيم OCR مبدئية؛ راجع رقم الموديل وبقية الحقول يدويًا قبل المطابقة."
+                )
+                if st.session_state.get("ocr_error"):
+                    st.error("تعذرت قراءة OCR: " + st.session_state["ocr_error"])
+                if st.button("↻ إعادة قراءة OCR", key="retry_real_ocr", use_container_width=True):
+                    try:
+                        with st.spinner("جاري إعادة قراءة الصورة..."):
+                            extraction = extract_from_image(image_bytes)
+                        for field in FIELDS:
+                            st.session_state[f"input_{scenario['key']}_{field}"] = str(
+                                extraction["fields"].get(field, "")
+                            )
+                        st.session_state["ocr_result"] = extraction
+                        st.session_state.pop("ocr_error", None)
+                        st.session_state.pop("last_result", None)
+                        st.success("تم تحديث الحقول المقترحة؛ راجعها قبل المطابقة.")
+                    except Exception as exc:
+                        st.error("تعذرت إعادة قراءة OCR: " + str(exc)[:300])
+                extracted_preview = st.session_state.get("ocr_result")
+                if extracted_preview:
+                    with st.expander("النص المستخرج وحقول OCR المقترحة"):
+                        st.json(extracted_preview["fields"])
+                        st.code(extracted_preview["raw_text"] or "لم يُستخرج نص", language="text")
+                    if not extracted_preview["fields"].get("model"):
+                        st.error(
+                            "لم يتم التعرف على رقم الموديل آليًا. أدخل رقم الموديل الظاهر "
+                            "على الملصق يدويًا؛ لا يمكن المطابقة دون تحديد الطراز."
+                        )
         else:
-            st.info("للتجربة السريعة استخدم حقول السيناريو الجاهزة. لقراءة صورة جديدة ارفعها واستخدم زر OCR ثم راجع القيم.")
+            # When the user removes an uploaded image, restore the selected
+            # scenario once; do not keep stale empty or OCR-derived values.
+            if st.session_state.pop("current_upload_fingerprint", None) is not None:
+                st.session_state.pop("last_result", None)
+                st.session_state.pop("ocr_result", None)
+                st.session_state.pop("ocr_error", None)
+                st.session_state["input_source"] = "SCENARIO_FIXTURE"
+                for field in FIELDS:
+                    st.session_state[f"input_{scenario['key']}_{field}"] = str(
+                        scenario["label"].get(field, "")
+                    )
+            st.info(
+                "لإظهار نتائج الحالات الأربع مباشرة اختر السيناريو من القائمة أعلاه، "
+                "ثم اضغط «إجراء المطابقة». يمكنك أيضًا رفع إحدى صور التجربة السابقة."
+            )
 
     with form_col:
         st.markdown('<div class="fieldtitle">البيانات المراد فحصها</div>', unsafe_allow_html=True)
@@ -157,7 +223,8 @@ with tab_demo:
     if submitted:
         result = evaluate(label, db)
         st.session_state["last_result"] = {"scenario": scenario["key"], "label": label, "result": result,
-                                          "image_uploaded": upload.name if upload is not None else None}
+                                          "image_uploaded": upload.name if upload is not None else None,
+                                          "input_source": st.session_state.get("input_source", "SCENARIO_FIXTURE")}
 
     saved = st.session_state.get("last_result")
     if saved and saved["scenario"] == scenario["key"]:
@@ -170,7 +237,7 @@ with tab_demo:
         }
         css_class, emoji = presentation[result["status"]]
         st.markdown(f'<div class="result {css_class}"><h3>{emoji} {escape(result["status_ar"])}</h3><p>{escape(result["explanation_ar"])}</p></div>', unsafe_allow_html=True)
-        st.caption("القرار مبني على الحقول المعروضة بعد مراجعتك. استخراج OCR لا يثبت صحة القيم أو مصداقية الصورة.")
+        st.caption("القرار مبني على قيم الحقول المعروضة. إذا كانت الصورة من أمثلتنا الاصطناعية، فتمت تعبئة البيانات من سجل المثال، وليس من OCR؛ لا يعني ذلك تحققًا بصريًا أو رسميًا.")
         st.subheader("جدول أدلة المقارنة")
         if result["comparisons"]:
             display = []
@@ -180,10 +247,11 @@ with tab_demo:
                                 "المراجعة": {"MATCH":"✅ متطابق", "DIFF":"⚠️ مختلف", "MISSING":"❓ ناقص", "INVALID":"❓ غير صالح"}[r["outcome"]]})
             st.dataframe(pd.DataFrame(display), hide_index=True, use_container_width=True)
         report = {
-            "project": "طابِق | TABAQ", "version": "1.3.0",
+            "project": "طابِق | TABAQ", "version": "1.4.0",
             "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "data_policy": "Synthetic demo data only; no governmental reference or live verification",
             "scenario": scenario["key"], "uploaded_file_name": saved["image_uploaded"],
+            "input_source": saved.get("input_source", "SCENARIO_FIXTURE"),
             "entered_label_fields": saved["label"], "evaluation": result,
         }
         st.download_button("⬇️ تحميل مسودة تقرير الأدلة JSON", as_json(report),
