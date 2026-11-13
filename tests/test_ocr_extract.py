@@ -26,7 +26,7 @@ class OCRParserTests(unittest.TestCase):
         self.assertEqual(result,{"model":"AC-18000-X"})
 
     def test_arabic_sample(self):
-        result=parse_text("مكيف سبليت نسيم\\nرقم الطراز AC-18000-X\\nالاستهلاك السنوي ٢٤٠٠ ك.و.س")
+        result=parse_text("مكيف سبليت نسيم\nرقم الطراز AC-18000-X\nالاستهلاك السنوي ٢٤٠٠ ك.و.س")
         self.assertEqual(result.get("annual_consumption"),"2400")
         self.assertEqual(result.get("model"),"AC-18000-X")
 
