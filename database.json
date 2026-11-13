@@ -1,0 +1,50 @@
+{
+  "AC-18000-X": {
+    "reference_id": "DEMO-AC-001",
+    "origin": "synthetic",
+    "last_updated": "2026-11-13",
+    "brand": "نسيم",
+    "model": "AC-18000-X",
+    "device_type": "مكيف",
+    "product_type": "سبليت",
+    "annual_consumption": 2400,
+    "energy_efficiency": 12.5,
+    "efficiency_level": "ب"
+  },
+  "AC-123": {
+    "reference_id": "DEMO-AC-123",
+    "origin": "synthetic",
+    "last_updated": "2026-11-13",
+    "brand": "الزامل",
+    "model": "AC-123",
+    "device_type": "مكيف",
+    "product_type": "سبليت",
+    "annual_consumption": 1200,
+    "energy_efficiency": 3.5,
+    "efficiency_level": "A"
+  },
+  "AC-456": {
+    "reference_id": "DEMO-AC-456",
+    "origin": "synthetic",
+    "last_updated": "2026-11-13",
+    "brand": "إل جي",
+    "model": "AC-456",
+    "device_type": "مكيف",
+    "product_type": "سبليت",
+    "annual_consumption": 1200,
+    "energy_efficiency": 4,
+    "efficiency_level": "A+"
+  },
+  "AC-789": {
+    "reference_id": "DEMO-AC-789",
+    "origin": "synthetic",
+    "last_updated": "2026-11-13",
+    "brand": "سامسونج",
+    "model": "AC-789",
+    "device_type": "مكيف",
+    "product_type": "سبليت",
+    "annual_consumption": 1800,
+    "energy_efficiency": 3,
+    "efficiency_level": "B"
+  }
+}
