@@ -224,7 +224,8 @@ with tab_demo:
         result = evaluate(label, db)
         st.session_state["last_result"] = {"scenario": scenario["key"], "label": label, "result": result,
                                           "image_uploaded": upload.name if upload is not None else None,
-                                          "input_source": st.session_state.get("input_source", "SCENARIO_FIXTURE")}
+                                          "input_source": st.session_state.get("input_source", "SCENARIO_FIXTURE"),
+                                          "matched_fixture": known_demo["key"] if image_bytes is not None and known_demo is not None else None}
 
     saved = st.session_state.get("last_result")
     if saved and saved["scenario"] == scenario["key"]:
@@ -250,7 +251,9 @@ with tab_demo:
             "project": "طابِق | TABAQ", "version": "1.4.0",
             "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "data_policy": "Synthetic demo data only; no governmental reference or live verification",
-            "scenario": scenario["key"], "uploaded_file_name": saved["image_uploaded"],
+            "scenario": saved.get("matched_fixture") or scenario["key"],
+            "scenario_selected_in_ui": scenario["key"],
+            "uploaded_file_name": saved["image_uploaded"],
             "input_source": saved.get("input_source", "SCENARIO_FIXTURE"),
             "entered_label_fields": saved["label"], "evaluation": result,
         }
