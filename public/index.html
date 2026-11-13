@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#083f40">
+<meta name="description" content="طابِق | TABAQ — محرك تجريبي لشرح مطابقة بيانات ملصقات كفاءة الطاقة ومراجعة الاختلافات.">
+<title>طابِق | TABAQ — من التحقق إلى الدليل</title>
+<style>
+:root{color-scheme:dark;font-family:Tahoma,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#081d23;color:#f1f8f6;line-height:1.8}
+a{color:inherit;text-decoration:none}.shell{min-height:100vh;overflow:hidden;position:relative}
+.shell:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:#0a7666;filter:blur(180px);opacity:.3;top:-330px;left:-240px;pointer-events:none}
+nav,main,footer{position:relative;max-width:1070px;margin:auto;padding-inline:24px}
+nav{padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:900;font-size:1.5rem;letter-spacing:-.03em}.brand span{font-size:.85rem;color:#86dac8;font-weight:700;margin-right:9px}
+.tag{border:1px solid #225758;padding:5px 12px;border-radius:30px;font-size:.78rem;color:#afd6cc}
+main{padding-block:90px 68px}.eyebrow{font-size:.85rem;color:#80decb;letter-spacing:.08em}
+h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.3;margin:14px 0 18px;font-weight:900;max-width:800px}
+h1 em{font-style:normal;color:#64d8b9}p.lead{color:#bfd7d3;font-size:clamp(1.05rem,2vw,1.28rem);max-width:770px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{border:1px solid #4b7773;padding:12px 25px;border-radius:12px;font-weight:700;display:inline-block}
+.primary{background:#0bad86;border-color:#0bad86;color:#062c2b}.btn:focus-visible{outline:3px solid #e4fffc;outline-offset:4px}
+section{margin-top:58px}.section-title{font-size:1.4rem;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{background:#0d3035;border:1px solid #275556;border-radius:16px;padding:19px}
+.icon{font-size:1.5rem}.card h3{font-size:1rem;margin:13px 0 8px}.card p{color:#b7d1cd;font-size:.88rem;margin:0}
+.notice{margin-top:38px;border-right:4px solid #b9d299;background:#123138;padding:15px 18px;border-radius:8px;color:#cbded8;font-size:.9rem}
+footer{border-top:1px solid #254246;padding-block:22px;color:#8fb7af;font-size:.8rem}
+@media(max-width:720px){main{padding-top:64px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.cards{grid-template-columns:1fr}nav{gap:12px}.tag{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav><a class="brand" href="/" aria-label="طابِق الصفحة الرئيسية">طابِق <span>TABAQ</span></a><span class="tag">MVP v1.2 · نسخة تجريبية</span></nav>
+<main>
+<div class="eyebrow">من التحقق إلى الدليل</div>
+<h1>هل تتطابق بيانات <em>ملصق الطاقة</em> مع السجل المرجعي؟</h1>
+<p class="lead">«طابِق» نموذج أولي لمحرك مطابقة ذكي ومفسّر: يقارن بيانات مُدخلة بمراجع اصطناعية، ويبرز الاختلافات، ويعرف متى يمتنع عن إصدار حكم لعدم كفاية الأدلة.</p>
+<div class="buttons">
+<a class="btn primary" href="https://tabaq2.streamlit.app/" target="_blank" rel="noopener noreferrer">افتح النموذج التفاعلي ↗</a>
+<a class="btn" href="https://github.com/majmaah99-ops/tabaq" target="_blank" rel="noopener noreferrer">استعرض الكود على GitHub ↗</a>
+</div>
+<section aria-labelledby="features"><h2 class="section-title" id="features">أربع حالات يمكن تجربتها</h2>
+<div class="cards">
+<div class="card"><div class="icon">✓</div><h3>متطابق</h3><p>تطابق الحقول المطلوبة ضمن نطاق المقارنة.</p></div>
+<div class="card"><div class="icon">!</div><h3>اختلاف</h3><p>إظهار الحقول المتعارضة مع الأدلة.</p></div>
+<div class="card"><div class="icon">?</div><h3>غير محسوم</h3><p>الامتناع عند نقص أو عدم صلاحية البيانات.</p></div>
+<div class="card"><div class="icon">⌕</div><h3>مرجع غير متاح</h3><p>عدم تقديم حكم عند غياب سجل للطراز.</p></div>
+</div></section>
+<div class="notice"><strong>تنويه:</strong> هذه صفحة تعريفية ثابتة مستضافة على Vercel. يعمل تطبيق المطابقة التفاعلي على Streamlit Community Cloud. السجلات والحالات المعروضة اصطناعية، ولا تمثل تحققًا حكوميًا رسميًا أو كشفًا للتزوير. استخراج بيانات الصور آليًا لم يكتمل بعد.</div>
+</main>
+<footer>طابِق | TABAQ — نموذج أولي تجريبي لعرض الفكرة والاختبارات، وليس خدمة رسمية تابعة للهيئة.</footer>
+</div>
+</body>
+</html>
