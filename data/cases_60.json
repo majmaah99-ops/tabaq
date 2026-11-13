@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "M01",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M02",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M03",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M04",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M05",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M06",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M07",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M08",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M09",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M10",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M11",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M12",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M13",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M14",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M15",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M16",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M17",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M18",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M19",
+    "category": "match",
+    "label": {
+      "brand": "نَسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "٢٬٤٠٠",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "M20",
+    "category": "match",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "MATCH",
+    "expected_reason": "ALL_FIELDS_MATCH"
+  },
+  {
+    "id": "D01",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2500,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D02",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 13.1,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D03",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2502,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D04",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 13.3,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D05",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2504,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D06",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 13.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D07",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2506,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D08",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 13.7,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D09",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2508,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D10",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 13.9,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D11",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2510,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D12",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 14.1,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D13",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2512,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D14",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 14.3,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D15",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2514,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D16",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 14.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D17",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2516,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D18",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 14.7,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D19",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2518,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "D20",
+    "category": "discrepancy",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 14.9,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "DISCREPANCY",
+    "expected_reason": "FIELD_MISMATCH"
+  },
+  {
+    "id": "I01",
+    "category": "inconclusive",
+    "label": {
+      "brand": "",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I02",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I03",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I04",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I05",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": "",
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I06",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": ""
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I07",
+    "category": "inconclusive",
+    "label": {
+      "brand": "",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I08",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": "",
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "I09",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "MODEL_UNREADABLE"
+  },
+  {
+    "id": "I10",
+    "category": "inconclusive",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": "",
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "INCONCLUSIVE",
+    "expected_reason": "FIELDS_INCOMPLETE"
+  },
+  {
+    "id": "N01",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-1",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N02",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-2",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N03",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-3",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N04",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-4",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N05",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-5",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N06",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-6",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N07",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-7",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N08",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-8",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N09",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-9",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  },
+  {
+    "id": "N10",
+    "category": "no_reference",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-UNKNOWN-10",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    },
+    "references": {
+      "AC-18000-X": {
+        "reference_id": "DEMO-AC-001",
+        "origin": "synthetic",
+        "last_updated": "2026-11-13",
+        "brand": "نسيم",
+        "model": "AC-18000-X",
+        "device_type": "مكيف",
+        "product_type": "سبليت",
+        "annual_consumption": 2400,
+        "energy_efficiency": 12.5,
+        "efficiency_level": "ب"
+      }
+    },
+    "expected_status": "NO_REFERENCE",
+    "expected_reason": "MODEL_NOT_FOUND"
+  }
+]
