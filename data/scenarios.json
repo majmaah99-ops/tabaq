@@ -1,0 +1,62 @@
+[
+  {
+    "key": "match",
+    "title": "1 · تطابق كامل",
+    "image": "assets/01_match.svg",
+    "expected_status": "MATCH",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    }
+  },
+  {
+    "key": "discrepancy",
+    "title": "2 · اختلاف في الاستهلاك",
+    "image": "assets/02_discrepancy.svg",
+    "expected_status": "DISCREPANCY",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 3100,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    }
+  },
+  {
+    "key": "inconclusive",
+    "title": "3 · حقل غير مقروء",
+    "image": "assets/03_unreadable.svg",
+    "expected_status": "INCONCLUSIVE",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-18000-X",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": ""
+    }
+  },
+  {
+    "key": "no_reference",
+    "title": "4 · مرجع غير متاح",
+    "image": "assets/04_no_reference.svg",
+    "expected_status": "NO_REFERENCE",
+    "label": {
+      "brand": "نسيم",
+      "model": "AC-99999-Z",
+      "device_type": "مكيف",
+      "product_type": "سبليت",
+      "annual_consumption": 2400,
+      "energy_efficiency": 12.5,
+      "efficiency_level": "ب"
+    }
+  }
+]
