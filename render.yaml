@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tabaq-web
+    runtime: docker
+    repo: https://github.com/majmaah99-ops/tabaq
+    branch: main
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /_stcore/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
